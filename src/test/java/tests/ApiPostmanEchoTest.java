@@ -11,7 +11,7 @@ public class ApiPostmanEchoTest {
         String baseUri = "https://postman-echo.com/get";
 
         given()
-                .relaxedHTTPSValidation()
+                .log().all()
                 .param("foo1", "bar1")
                 .param("foo2", "bar2")
         .when()
@@ -28,7 +28,7 @@ public class ApiPostmanEchoTest {
         String requestBody = "This is expected to be sent back as part of response body.";
 
         given()
-                .relaxedHTTPSValidation()
+                .log().all()
                 .body(requestBody)
         .when()
                 .post(baseUri)
@@ -44,7 +44,7 @@ public class ApiPostmanEchoTest {
         String requestBody = "This is expected to be sent back as part of response body.";
 
         given()
-                .relaxedHTTPSValidation()
+                .log().all()
                 .body(requestBody)
         .when()
                 .put(baseUri)
@@ -60,7 +60,7 @@ public class ApiPostmanEchoTest {
         String requestBody = "This is expected to be sent back as part of response body.";
 
         given()
-                .relaxedHTTPSValidation()
+                .log().all()
                 .body(requestBody)
         .when()
                 .delete(baseUri)

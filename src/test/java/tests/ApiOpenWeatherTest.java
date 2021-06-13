@@ -76,7 +76,7 @@ public class ApiOpenWeatherTest {
                 .statusCode(200)
                 .body("name", is("Mountain View"))
                 .body("coord.lon", is(-122.088F))
-                .body("main.temp", greaterThan(25F));
+                .body("main.temp", greaterThan(20F));
     }
 
     public void validarRequisicaoSemAppId() {
